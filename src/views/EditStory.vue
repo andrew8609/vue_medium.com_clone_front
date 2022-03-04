@@ -119,7 +119,9 @@ import store from "@/store";
             return tagStringArray;
           },
           set: function(newHashtags) {
-            this.story.hashtag = newHashtags;
+            newHashtags.forEach(element => {
+              this.story.hashtag.push({hashtag_name: element});
+            });
           }
         }
     },
