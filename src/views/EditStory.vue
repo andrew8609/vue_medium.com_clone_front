@@ -24,7 +24,7 @@
               Hashtag:
           </h3>
           <v-combobox
-            v-model="story.hashtag"
+            v-model="storyHashtags"
             chips
             clearable
             label="Input Tags"
@@ -110,7 +110,18 @@ import store from "@/store";
     },
     computed: {
         ...mapGetters(["story"]),
-
+        storyHashtags: {
+          get: function() {
+            var tagStringArray = [];
+            this.story.hashtag.forEach(element => {
+                tagStringArray.push(element.hashtag_name);
+            });
+            return tagStringArray;
+          },
+          set: function(newHashtags) {
+            this.story.hashtag = newHashtags;
+          }
+        }
     },
   }
 </script>
