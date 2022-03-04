@@ -46,6 +46,7 @@ export default {
     }
   },
   mounted() {
+    console.log("confirm sign up by token");
     this.$store.dispatch(CONFIRM_SIGNUP_BY_TOKEN, { token: this.$route.query.token})
     .then(()=>{
       this.dialog = true;
