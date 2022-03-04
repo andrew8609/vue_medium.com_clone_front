@@ -13,13 +13,13 @@
               prepend-inner-icon="mdi-magnify"
               @keydown.enter="onSearchTermEntered"
             ></v-text-field>
-          <!-- </router-link> -->
         </li>
 
         <li class="nav-item" data-app>
           <v-menu offset-y>
             <template v-slot:activator="{ on }">
-                <img v-on="on" :src="currentUser.photo_url" />
+                <img v-if="currentUser.photo_url != null" v-on="on" :src="currentUser.photo_url" />
+                <img v-else v-on="on" src="https://www.seekpng.com/png/detail/73-730482_existing-user-default-avatar.png" />
             </template>
             <v-list>
               <v-list-item @click.prevent="onClickProfile">
