@@ -51,6 +51,7 @@ const initialState = {
     content: "",
     content_pure: "",
     hashtag: [],
+    hashtag_struct: [],
     clap_number: 0,
   },
   isFollowing: false,
@@ -235,7 +236,12 @@ export const mutations = {
     state.article.tagList = state.article.tagList.filter(t => t !== tag);
   },
   [SET_STORY_HASHTAGS](state, hashtags) {
-    state.story.hashtag = hashtags;
+    let hashtagArray =[];
+    hashtags.forEach(element => {
+      hashtagArray.push(element.hashtag_name);
+    });
+    state.story.hashtag = hashtagArray;
+    state.story.hashtag_struct = hashtags;
   },
   [SET_AUTHOR_FOLLOWERS](state, followeds) {
     state.followeds = followeds;

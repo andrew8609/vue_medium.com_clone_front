@@ -211,7 +211,7 @@ span {
                             </h1>
                             <div style="margin:50px" v-html="story.content"></div>
                             <v-chip-group column active-class="primary--text">
-                                <v-chip v-for="(hashtag, index) of story.hashtag" :key="index" @click="onClickHashtag(hashtag.id)">{{ hashtag.hashtag_name }}</v-chip>
+                                <v-chip v-for="(hashtag, index) of story.hashtag_struct" :key="index" @click="onClickHashtag(hashtag.id)">{{ hashtag.hashtag_name }}</v-chip>
                             </v-chip-group>
                         </v-sheet>
                     </v-col>
