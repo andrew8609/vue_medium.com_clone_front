@@ -45,7 +45,6 @@
 
  import { mapGetters } from "vuex";
  import { FETCH_PUBLICPROFILE } from "@/store/actions.type";
- import { DOMAIN } from "@/common/config";
  import store from "@/store";
 
 export default {
