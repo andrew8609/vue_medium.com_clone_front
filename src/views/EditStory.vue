@@ -81,8 +81,8 @@ import store from "@/store";
     async beforeRouteEnter(to, from, next) {
         await store.dispatch(STORY_RESET_STATE);
         if (to.params.storyId !== undefined) {
-        await store.dispatch(FETCH_STORY, to.params.storyId);
-        await store.dispatch(FETCH_STORY_HASHTAGS, to.params.storyId);
+          await store.dispatch(FETCH_STORY, to.params.storyId);
+          await store.dispatch(FETCH_STORY_HASHTAGS, to.params.storyId);
         }
         return next();
     },

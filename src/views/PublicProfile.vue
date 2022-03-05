@@ -45,6 +45,7 @@
 
  import { mapGetters } from "vuex";
  import { FETCH_PUBLICPROFILE } from "@/store/actions.type";
+ import { DOMAIN } from "@/common/config";
  import store from "@/store";
 
 export default {
@@ -71,7 +72,7 @@ export default {
                 elements[0].style.cssText +='width:100px;height:100px';
                 return elements[0].outerHTML;
             } else {
-                var emptyImg = '<img style="width:100px;height:100px" src = "http://localhost:3000/emptyImage.jpg"/>';
+                var emptyImg = `<img style="width:100px;height:100px" src = "${DOMAIN}/emptyImage.jpg"/>`;
                 return emptyImg;
             }
             

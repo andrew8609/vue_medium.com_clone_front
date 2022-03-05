@@ -252,6 +252,7 @@ export const mutations = {
     state.story.title = "";
     state.story.content = "";
     state.story.hashtag = [];
+    state.story.hashtag_struct = [];
     state.story.id = "";
     state.story.comments = [];
     state.isFollowing = false;
