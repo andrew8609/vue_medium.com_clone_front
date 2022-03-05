@@ -72,7 +72,7 @@ export default {
                 elements[0].style.cssText +='width:100px;height:100px';
                 return elements[0].outerHTML;
             } else {
-                var emptyImg = `<img style="width:100px;height:100px" src = "${DOMAIN}/emptyImage.jpg"/>`;
+                var emptyImg = `<img style="width:100px;height:100px" src = "https://i.ibb.co/4gcGx5M/empty-Image.jpg"/>`;
                 return emptyImg;
             }
             
