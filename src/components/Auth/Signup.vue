@@ -55,7 +55,7 @@ export default {
       username: "",
       email: "",
       password: "",
-      oauth_url: `${BACKEND_DOMAIN}/google?requestType=signup`
+      oauth_url: `${BACKEND_DOMAIN}/api/google?requestType=signup`
     };
   },
   computed: {
@@ -71,7 +71,7 @@ export default {
           password: this.password,
           username: this.username
         })
-        .then(() => this.$router.push({ name: "home" }));
+        .then(() => this.$router.push({ name: "dashboard" }));
     }
   }
 };
