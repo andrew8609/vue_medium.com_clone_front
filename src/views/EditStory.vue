@@ -101,8 +101,8 @@ import store from "@/store";
             });
         },
         removeChip (item) {
-            this.chips.splice(this.chips.indexOf(item), 1)
-            this.chips = [...this.chips]
+            this.story.hashtag.splice(this.story.hashtag.indexOf(item), 1)
+            this.story.hashtag = [...this.story.hashtag]
         },
         backToPreviousPage() {
             this.$router.back();
