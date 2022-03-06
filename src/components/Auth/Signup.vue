@@ -7,7 +7,7 @@
               <v-btn
                 rounded
                 outlined
-                 href = "http://localhost:3000/google?requestType=signup"
+                 :href = "oauth_url"
                  align="center"
                  justify="center"
                  style="width: 300px"
@@ -46,6 +46,7 @@
 <script>
 import { mapState } from "vuex";
 import { REGISTER } from "@/store/actions.type";
+ import { BACKEND_DOMAIN } from "@/common/config";
 
 export default {
   name: "Signup",
@@ -53,7 +54,8 @@ export default {
     return {
       username: "",
       email: "",
-      password: ""
+      password: "",
+      oauth_url: `${BACKEND_DOMAIN}/google?requestType=signup`
     };
   },
   computed: {

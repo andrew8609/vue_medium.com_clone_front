@@ -47,7 +47,7 @@
 <script>
 import { mapState } from "vuex";
 import { REGISTER } from "@/store/actions.type";
- import { DOMAIN } from "@/common/config";
+ import { BACKEND_DOMAIN } from "@/common/config";
 
 export default {
   name: "Signin",
@@ -56,7 +56,7 @@ export default {
       username: "",
       email: "",
       password: "",
-      oauth_url: `${DOMAIN}/google?requestType=signin`
+      oauth_url: `${BACKEND_DOMAIN}/google?requestType=signin`
     };
   },
   computed: {
