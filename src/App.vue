@@ -1,3 +1,7 @@
+<style>
+  @import './assets/main.css';
+</style>
+
 <template>
   <v-app id="inspire">
     <v-main>
@@ -13,4 +17,3 @@ export default {
 };
 </script>
 
-<style></style>
