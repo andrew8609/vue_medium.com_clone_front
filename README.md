@@ -1,4 +1,4 @@
-# vue2-medium
+# VueJS Medium.com Clone project
 
 ## Project setup
 ```
